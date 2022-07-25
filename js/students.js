@@ -1,4 +1,4 @@
-const students = [
+export const students = [
   {
     name: 'James',
     gender: 'male',
@@ -49,3 +49,7 @@ const students = [
     hasCar: false,
   },
 ];
+
+export const nums = [-50, 14, 0, 24, 100, -45];
+
+// console.log('HEllo from students');
