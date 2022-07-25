@@ -50,6 +50,17 @@ export const students = [
   },
 ];
 
+// {
+//   male: []
+//   female: []
+// }
+
+export const users = [
+  { name: 'James', exp: 5 },
+  { name: 'Mike', exp: 10 },
+  { name: 'Jill', exp: 15 },
+];
+
 export const nums = [-50, 14, 0, 24, 100, -45];
 
 // console.log('HEllo from students');
