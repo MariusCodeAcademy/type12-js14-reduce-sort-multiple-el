@@ -1,8 +1,9 @@
 'use strict';
-import { users } from './students.js';
+import { students, users } from './students.js';
 console.log('reduce.js');
 
 const nums = [1, 2, 3, 4];
+//   1/4 + 2/4 + 3/4 + 4/4
 
 let total = 0;
 nums.forEach((sk) => {
@@ -25,8 +26,28 @@ const reduceNums = nums.reduce((total, sk, idx) => {
   // console.log('idx ===========================================', idx);
   return total + sk;
 }, 0);
+console.log('reduceNums ===', reduceNums);
 
 // naudojant reduce gauti vidurki be isoriniu kintamuju
-
-console.log('reduceNums ===', reduceNums);
+const numsAvg = nums.reduce((total, sk, idx, arr) => {
+  console.log('total ===', total);
+  return total + sk / arr.length;
+});
+console.log('numsAvg ===', numsAvg);
 console.groupEnd();
+
+// users
+// kiek bendrai yra patirties per users darbuotojus
+const yearsOfExp = users.reduce((totalExp, uObj) => totalExp + uObj.exp, 0);
+let yearsOfExpAvg = users.reduce((totalExp, uObj) => totalExp + uObj.exp / users.length, 0);
+yearsOfExpAvg = users.reduce((totalExp, uObj) => totalExp + uObj.exp, 0) / users.length;
+console.log('yearsOfExpAvg ===', yearsOfExpAvg);
+console.log('yearsOfExp ===', yearsOfExp);
+
+// skaiciuojam su reduce vidutini studentu amziu
+
+// sukurti funkcija kuri grazina kiek yra vyru ir moteru objekto pavidalu
+// {
+//   vyrai: 15;
+//   moterys: 10;
+// }
