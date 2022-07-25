@@ -51,3 +51,30 @@ console.log('yearsOfExp ===', yearsOfExp);
 //   vyrai: 15;
 //   moterys: 10;
 // }
+getMalesFemales();
+function getMalesFemales() {
+  const rezultObj = {
+    vyrai: 0,
+    moterys: 0,
+  };
+  students.forEach((personObj) => {
+    if (personObj.gender === 'male') {
+      return rezultObj.vyrai++;
+    }
+    rezultObj.moterys++;
+  });
+  console.log('rezultObj ===', rezultObj);
+  return rezultObj;
+}
+
+const getMalesFemalesReduce = students.reduce(
+  (rezultObj, personObj) => {
+    // logika
+    // rezltatai
+    // sekme
+  },
+  {
+    vyrai: 0,
+    moterys: 0,
+  }
+);
