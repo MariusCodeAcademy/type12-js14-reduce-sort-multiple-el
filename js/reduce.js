@@ -70,11 +70,26 @@ function getMalesFemales() {
 const getMalesFemalesReduce = students.reduce(
   (rezultObj, personObj) => {
     // logika
+    personObj.gender === 'male' ? rezultObj.vyrai++ : rezultObj.moterys++;
     // rezltatai
     // sekme
+    return rezultObj;
   },
   {
     vyrai: 0,
     moterys: 0,
   }
 );
+
+const getMalesFemalesReduceArr = students.reduce(
+  (rezultArr, personObj) => {
+    // logika
+    personObj.gender === 'male' ? rezultArr[0]++ : rezultArr[1]++;
+    // rezltatai
+    // sekme
+    return rezultArr;
+  },
+  [0, 0]
+);
+// [4, 3];
+console.log('getMalesFemalesReduceArr ===', getMalesFemalesReduceArr);
